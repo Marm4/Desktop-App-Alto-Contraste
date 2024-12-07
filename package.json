@@ -1,0 +1,66 @@
+{
+  "name": "alto-contraste-escritorio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "build": {
+    "appId": "com.marm4.alto_contraste",
+    "productName": "Alto Contraste Escritorio",
+    "directories": {
+      "buildResources": "assets/icons"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "src/**/*",
+      "assets/icons/*",
+      "node_modules/**/*",
+      "firebase-config.js"
+    ],
+    "win": {
+      "icon": "assets/icons/ic_alto_contraste.ico",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "mac": {
+      "icon": "assets/icons/ic_alto_contraste.png",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "linux": {
+      "icon": "assets/icons/ic_alto_contraste.png",
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ]
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist-dmg": "npm run dist && node create-dmg.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.0.1",
+    "electron-builder": "^24.13.3",
+    "electron-installer-dmg": "^4.0.0",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "electron-router-dom": "^1.0.5",
+    "express": "^4.19.2",
+    "firebase": "^9.0.0",
+    "google-auth-library": "^9.11.0",
+    "googleapis": "^140.0.1",
+    "http-proxy-middleware": "^3.0.0"
+  }
+}

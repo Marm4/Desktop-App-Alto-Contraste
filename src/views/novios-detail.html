@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle novios</title>
+  <link rel="stylesheet" href="../styles/novios-detail.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+  <main id="novios-detail" class="section">
+    <section class="back-section"> 
+      <svg id="back-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 32 32"><path fill="white" d="M10 16L20 6l1.4 1.4l-8.6 8.6l8.6 8.6L20 26z"/></svg>
+      <h4 id="nombre-novios-title"></h4>
+      <svg id="edit-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM21.41 6.34l-3.75-3.75l-2.53 2.54l3.75 3.75z"/></svg>
+    </section>
+    <section class="nav-section-novios-detail">
+        <svg class="icon-novios-detail" data-view="fotos" xmlns="http://www.w3.org/2000/svg" width="2.8em" height="2.8em" viewBox="0 0 56 56"><path fill="white" d="M28 51.906c13.055 0 23.906-10.851 23.906-23.906c0-13.078-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.922 4.095 28c0 13.055 10.828 23.906 23.906 23.906M17.687 38.57c-2.507 0-3.773-1.242-3.773-3.68V22.376c0-2.461 1.266-3.703 3.773-3.703h2.696c.937 0 1.218-.211 1.758-.774l.96-1.078c.61-.656 1.22-1.008 2.438-1.008h4.781c1.219 0 1.828.352 2.414 1.008l.961 1.078c.54.61.82.774 1.758.774h2.813c2.46 0 3.75 1.242 3.75 3.703v12.516c0 2.437-1.29 3.68-3.75 3.68Zm10.149-3.328c3.89 0 7.008-3.047 7.008-7.054a6.982 6.982 0 0 0-7.008-7.008c-3.89 0-7.055 3.117-7.055 7.008a7.032 7.032 0 0 0 7.055 7.054m9.21-10.172c.868 0 1.595-.703 1.571-1.593c0-.891-.703-1.594-1.57-1.594c-.867 0-1.594.703-1.594 1.594c0 .89.727 1.593 1.594 1.593m-9.21 8.133a5.006 5.006 0 0 1-5.016-5.016c0-2.765 2.25-4.992 5.016-4.992a4.996 4.996 0 0 1 4.992 4.993a5 5 0 0 1-4.992 5.015"/></svg>
+        <svg class="icon-novios-detail" data-view="video" xmlns="http://www.w3.org/2000/svg" width="2.4em" height="2.4em" viewBox="0 0 14 14"><path fill="white" fill-rule="evenodd" d="M0 7a7 7 0 1 1 14 0A7 7 0 0 1 0 7m8.616-1.077l1.519-.673a.27.27 0 0 1 .366.253v2.994a.27.27 0 0 1-.366.254l-1.52-.674v.808a.539.539 0 0 1-.538.539h-4.04a.539.539 0 0 1-.538-.539v-3.77a.539.539 0 0 1 .539-.539h4.04a.539.539 0 0 1 .538.539z" clip-rule="evenodd"/></svg>
+        <svg class="icon-novios-detail" data-view="carpetas" xmlns="http://www.w3.org/2000/svg" width="2.8em" height="2.8em" viewBox="0 0 56 56"><path fill="white" d="M28 51.906c13.055 0 23.906-10.851 23.906-23.906c0-13.078-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.922 4.095 28c0 13.055 10.828 23.906 23.906 23.906M14.85 23.36v-3.047c0-2.25 1.149-3.398 3.141-3.398h3.422c1.101 0 1.64.211 2.437.82l.727.563c.563.469.984.68 1.781.68h11.18c2.367 0 3.586 1.195 3.586 3.515v.867Zm0 11.72v-9.821h26.274v9.82c0 2.32-1.195 3.516-3.234 3.516H18.437c-2.343 0-3.586-1.196-3.586-3.516"/></svg>
+        <svg class="icon-novios-detail" data-view="eventos" xmlns="http://www.w3.org/2000/svg" width="2.8em" height="2.8em" viewBox="0 0 24 24"><path fill="white" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m5 15H7v-2h10zm-9-3v-3h2v3zm3 0v-3h2v3zm3 0v-3h2v3zm3-4H7V8.5L12 6l5 2.5z"/></svg>
+      </section>
+
+    <section id="view-fotos" class="view-section">
+        <div id="fotos-multimedia-novios-detail" class="multimedia-novios-detail"></div>
+        <div class="agregar-multimedia-container">
+            <p id="mensaje-error-fotos"></p>
+            <input id= "nombre-media-fotos"  type="text" class="data-novios" placeholder="Nombre">
+            <input id= "url-media-fotos" type="text" class="data-novios" placeholder="Url carpeta">
+            <input id= "portada-media-fotos" type="text" class="data-novios" placeholder="Url portada">
+            <button id="guardar-media-fotos" class="button">Guardar</button>
+        </div>
+    </section>
+    <section id="view-video" class="view-section">
+        <div id="video-multimedia-novios-detail" class="multimedia-novios-detail"></div>
+        <div class="agregar-multimedia-container">
+          <p id="mensaje-error-video"></p>
+            <input id= "nombre-media-video" type="text" class="data-novios" placeholder="Nombre">
+            <input id= "url-media-video" type="text" class="data-novios" placeholder="Url video">
+            <input id= "portada-media-video" type="text" class="data-novios" placeholder="Url portada">
+            <button id="guardar-media-video" class="button">Guardar</button>
+        </div>
+    </section>
+    <section id="view-carpetas" class="view-section">
+      <div id="carpetas-multimedia-novios-detail" class="multimedia-novios-detail"></div>
+      <div class="agregar-multimedia-container"></div>
+    </section>
+
+    <section id="view-eventos" class="view-section">
+      <div id="eventos-multimedia-novios-detail" class="multimedia-novios-detail"></div>
+      <div class="agregar-multimedia-container">
+        <p id="mensaje-error-eventos"></p>
+        <input id= "nombre-media-eventos" type="text" class="data-novios" placeholder="Nombre">
+        <input id= "portada-media-eventos" type="text" class="data-novios" placeholder="Url portada">
+        <input id= "cantidad-imagenes-media-eventos" type="number" class="data-novios" placeholder="Cantidad de imágenes">
+        <button id="guardar-media-eventos" class="button">Guardar</button>
+      </div>
+      
+    </section>
+
+    <section id="edit-novios-container">
+      <div id="edit-novios">
+        <h3 id="nombre-edit-novios">Hola</h3>
+        <input id="input-nombre-edit-novios" type="text" class="input-edit-media" placeholder="Nombre">
+
+        <div class="button-container-novios">
+          <button id="button-guardar-novios" class="button-edit-media">Cancelar</button>
+          <button id="button-borrar-novios" class="button-edit-media">Borrar</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="edit-media-container">
+      <div id="edit-media">
+        <h3 id="nombre-edit-media">Hola</h3>
+        <input id="input-nombre-edit-media" type="text" class="input-edit-media" placeholder="Nombre">
+        <input id="input-portada-edit-media" type="text" class="input-edit-media" placeholder="Url portada">
+        <div class="button-container-media">
+          <button id="button-guardar-media" class="button-edit-media">Cancelar</button>
+          <button id="button-borrar-media" class="button-edit-media">Borrar</button>
+        </div>
+      </div>
+    </section>
+    <div id="view-form" class="view-section">Contenido de Formulario</div>
+  </main>
+  <script src="../scripts/novios-detail.js"></script>
+</body>
+</html>

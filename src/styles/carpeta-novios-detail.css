@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  .back-section {
+    display: flex;
+    flex-direction: row;
+    width: 448.5px;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 15px 0 10px;
+    background-color: rgb(36, 36, 36);
+  }
+
+#carpeta-fotos-section {
+    display: flex;
+    width: 448.5px;
+    max-height: 700px;
+    resize: none;
+    overflow-y: auto;
+    margin: 10px 0 10px 25px;
+    align-items: top;
+    flex-wrap: wrap;
+}
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 10px 5px 10px;
+    overflow: hidden;
+}
+.image-container img {
+    width: 120px;
+    height: 100px;
+    object-fit: cover; /* Esto asegura que la imagen se recorte para llenar el contenedor */
+    object-position: center;
+}
+.image-container span {
+    width: 110px;
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#progress-bar-container {
+    visibility: hidden;
+    position: absolute;
+    top:86%;
+    width: 94%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 14px;
+    
+  }
+  
+  #progress-bar {
+    width: 0;
+    height: 5px;
+    background-color: #008cb4;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 2px;
+    transition: width 1s ease;
+  }
+
+  .button {
+    position: absolute;
+    top:90%;
+    width: 453px;
+    padding: 15px;
+
+    margin: 10px;
+    border: 1px solid #000000;
+    background-color: #008cb4;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #025e77;
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: #121212; 
+}
+
+/* Estilo para el thumb (la parte que se mueve de la barra) */
+::-webkit-scrollbar-thumb {
+    background: #292929; /* Color del thumb */
+    border-radius: 6px; /* Bordes redondeados */
+}
+
+/* Estilo para el thumb cuando se pasa el ratón por encima */
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f3f; /* Color del thumb al pasar el ratón por encima */
+}

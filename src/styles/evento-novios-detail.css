@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.back-section {
+  display: flex;
+  flex-direction: row;
+  width: 448.5px;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 15px 0 10px;
+  background-color: rgb(36, 36, 36);  
+}
+
+.image-container {
+  width: 100%;  /* Ancho deseado del contenedor */
+  height: 200px; /* Altura deseada del contenedor */
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.button {
+  width: 453px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  background-color: #008cb4;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#descargar-qr-evento{
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #025e77;
+}
+
+.agregar-multimedia-container {
+  padding: 10px 10px 0px 10px;
+}
+
+.data-novios {
+  width: 420px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  color: white;
+}
+
+#borrar-evento{
+  margin-top: 130px;
+  background-color: #121212;
+  border: none;
+  color: red;
+}
+
+#mensaje-error-eventos  {
+  visibility: hidden;
+  width: 445px;
+  position: absolute;
+  text-align: center;
+  top: 80%;
+ font-size: 14px;
+}
+

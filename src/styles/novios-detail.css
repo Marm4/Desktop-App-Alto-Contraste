@@ -1,0 +1,261 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.nav-section-novios-detail {
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(36, 36, 36);
+}
+
+.back-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 15px 0 10px;
+  background-color: rgb(36, 36, 36);
+}
+
+#back-svg {
+  padding-top: 5px;
+}
+
+.back-section h4 {
+  padding-top: 3px;
+  margin: 0px;
+}
+
+.fondo-negro {
+  height: 5020px;
+  background-color: black;
+}
+
+.icon-novios-detail:hover path {
+  fill: #008cb4;
+  transition: fill 0.3s ease;
+}
+
+.icon-novios-detail path {
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.icon-novios-detail.active path {
+  fill: #008cb4;
+  transition: fill 0.3s ease;
+}
+
+.view-section {
+  width: 474px;
+  display: none;
+}
+
+.view-section.active {
+  display: block;
+}
+
+.multimedia-novios-detail {
+  width: 98%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  overflow-y: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  gap: 0;
+}
+
+.data-novios {
+  width: 420px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  color: white;
+}
+
+.button {
+  width: 453px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  background-color: #008cb4;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #025e77;
+}
+
+#edit-novios-container {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 44, 44, 0.52); /* 0.52 es 52% de opacidad */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px); /* Ajusta el valor para más o menos desenfoque */
+}
+
+#edit-novios {
+  width: 300px;
+  height: 170px;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#edit-media-container {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 44, 44, 0.52); /* 0.52 es 52% de opacidad */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px); /* Ajusta el valor para más o menos desenfoque */
+}
+
+#edit-media {
+  width: 350px;
+  height: 230px;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.input-edit-media {
+  width: 200px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #242424;
+  border-radius: 10px;
+  color: white;
+}
+
+.button-container-media {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-top: 5px;
+}
+
+.button-edit-media {
+  width: 100px;
+  height: 40px;
+  background-color: #2c2c2c;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+
+#button-borrar-media {
+  color: rgb(250, 44, 44);
+}
+
+#button-borrar-novios {
+  color: rgb(250, 44, 44);
+}
+
+#fotos-multimedia-novios-detail div,
+#video-multimedia-novios-detail div,
+#carpetas-multimedia-novios-detail div,
+#eventos-multimedia-novios-detail div {
+  display: flex;
+  width: 94%;
+  justify-content: start;
+  border: 1px solid white;
+  background-color: white;
+  color: #000000;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.2s, background-color 0.2s; /* Añadir transición para el color */
+  flex: 0 0 auto;
+}
+
+#fotos-multimedia-novios-detail div:hover,
+#video-multimedia-novios-detail div:hover,
+#carpetas-multimedia-novios-detail div:hover,
+#eventos-multimedia-novios-detail div:hover {
+  background-color: #52b6d1;
+}
+
+.agregar-multimedia-container {
+  margin-top: 150px;
+  padding: 10px 10px 0px 10px;
+}
+
+.ic_fotos {
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Cpath fill='white' d='M28 51.906c13.055 0 23.906-10.851 23.906-23.906c0-13.078-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.922 4.095 28c0 13.055 10.828 23.906 23.906 23.906M17.687 38.57c-2.507 0-3.773-1.242-3.773-3.68V22.376c0-2.461 1.266-3.703 3.773-3.703h2.696c.937 0 1.218-.211 1.758-.774l.96-1.078c.61-.656 1.22-1.008 2.438-1.008h4.781c1.219 0 1.828.352 2.414 1.008l.961 1.078c.54.61.82.774 1.758.774h2.813c2.46 0 3.75 1.242 3.75 3.703v12.516c0 2.437-1.29 3.68-3.75 3.68Zm10.149-3.328c3.89 0 7.008-3.047 7.008-7.054a6.982 6.982 0 0 0-7.008-7.008c-3.89 0-7.055 3.117-7.055 7.008a7.032 7.032 0 0 0 7.055 7.054m9.21-10.172c.868 0 1.595-.703 1.571-1.593c0-.891-.703-1.594-1.57-1.594c-.867 0-1.594.703-1.594 1.594c0 .89.727 1.593 1.594 1.593m-9.21 8.133a5.006 5.006 0 0 1-5.016-5.016c0-2.765 2.25-4.992 5.016-4.992a4.996 4.996 0 0 1 4.992 4.993a5 5 0 0 1-4.992 5.015'/%3E%3C/svg%3E");
+}
+
+.ic_video {
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='white' fill-rule='evenodd' d='M0 7a7 7 0 1 1 14 0A7 7 0 0 1 0 7m8.616-1.077l1.519-.673a.27.27 0 0 1 .366.253v2.994a.27.27 0 0 1-.366.254l-1.52-.674v.808a.539.539 0 0 1-.538.539h-4.04a.539.539 0 0 1-.538-.539v-3.77a.539.539 0 0 1 .539-.539h4.04a.539.539 0 0 1 .538.539z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.ic_form {
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7zm10 2h-6v-2h6zm0-4h-6v-2h6zm0-4h-6V7h6z'/%3E%3C/svg%3E");
+}
+
+
+
+#mensaje-error-fotos,
+#mensaje-error-video,
+#mensaje-error-eventos  {
+  visibility: hidden;
+  width: 445px;
+  position: absolute;
+  text-align: center;
+  top: 67%;
+ font-size: 14px;
+}
+

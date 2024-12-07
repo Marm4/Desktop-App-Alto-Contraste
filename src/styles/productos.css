@@ -1,0 +1,51 @@
+.input-descripcion-producto{
+  font-family: Arial, sans-serif;
+    height: 150px;
+    max-height: 150px;
+    min-height: 150px;
+    max-width: 420px;
+    min-width: 420px;
+    
+}
+
+#lista-productos {
+  margin-top: 20px;
+  width: 98%;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  overflow-y: auto; 
+  white-space: nowrap;
+  padding-bottom: 10px;
+  gap: 0;  
+}
+   
+/* Estilo para cada elemento de novio */
+#lista-productos div {
+  display: flex;
+  width: 94%;
+  justify-content: start;
+  border: 1px solid white;
+  background-color: white;
+  color: #000000;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;    
+  box-sizing: border-box;
+  transition: transform 0.2s, background-color 0.2s; /* Añadir transición para el color */
+    flex: 0 0 auto; 
+  }
+    
+  #lista-productos div:hover {
+    background-color: #52b6d1;
+  }
+
+  #menasje-error-productos{
+    visibility: hidden;
+    width: 96%;
+    text-align: center;
+    font-size: 14px;
+  }
